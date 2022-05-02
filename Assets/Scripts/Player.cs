@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_rigidbody.GetRelativePointVelocity(transform.localPosition));
         if (isTouched && canPerform)
         {
             StartCoroutine(ResetDelayCollision());
@@ -81,7 +80,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeadZone"))
         {
-            transform.position = new Vector3(0, 1, 0);
+            transform.position = new Vector3(0, 2, 0);
         }
     }
 }
